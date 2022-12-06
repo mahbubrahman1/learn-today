@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Row } from 'react-bootstrap';
 import UseCourses from '../hooks/UseCourses';
 import Course from '../components/Course';
+import About from '../pages/About'
 
 const Home = () => {
     const { courses, setCourses } = UseCourses();
@@ -22,12 +23,15 @@ const Home = () => {
                             courses.map((course, index) => index < 8 && (<Course
                                 key={course.id}
                                 course={course}
-                            />)
-                            )
+                            />))
                         }
                     </Row>
                 </AnimatePresence>
             </motion.div>
+
+            {/* about us */}
+            <h2 className='text-center mt-4 fw-bold'>Why Choose Us</h2>
+            <About />
         </div>
     )
 }
