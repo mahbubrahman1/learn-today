@@ -38,7 +38,7 @@ const About = () => {
                     </Col>
                 </Row>
             </Container>
-        </div >
+        </div>
     )
 }
 

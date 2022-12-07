@@ -57,7 +57,7 @@ const Contact = () => {
                     </div>
                 </Col>
             </Row>
-        </Container >
+        </Container>
     )
 }
 
