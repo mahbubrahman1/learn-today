@@ -5,6 +5,7 @@ import { Row } from 'react-bootstrap';
 import UseCourses from '../hooks/UseCourses';
 import Course from '../components/Course';
 import About from '../pages/About'
+import Contact from './Contact';
 
 const Home = () => {
     const { courses, setCourses } = UseCourses();
@@ -32,6 +33,10 @@ const Home = () => {
             {/* about us */}
             <h2 className='text-center mt-5 fw-bold'>Why Choose Us</h2>
             <About />
+
+            {/* contact  */}
+            <h2 className='text-center mt-4 fw-bold'>Contact Us</h2>
+            <Contact />
         </div>
     )
 }
