@@ -6,22 +6,26 @@ import NavigationBar from './components/NavigationBar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import './App.scss';
 
 function App() {
   return (
-    <div style={{ overflowX: 'hidden' }}>
+    <motion.div style={{ overflowX: 'hidden' }}>
       <Router>
         <NavigationBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
       </Router>
       <Footer />
-    </div>
+    </motion.div >
   );
 }
 

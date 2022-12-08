@@ -2,11 +2,18 @@ import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEarthAmericas, faCertificate, faFire } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 import '../App.scss';
 
 const About = () => {
     return (
-        <div className='custom-color-bg'>
+        <motion.div
+            variants={pageAnimation}
+            initial='hidden'
+            animate='show'
+            className='custom-color-bg'
+        >
             <Container className='p-5'>
                 <Row xs={1} md={3} className="g-4">
                     <Col className='d-flex flex-column justify-items-center'>
@@ -38,7 +45,7 @@ const About = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </motion.div>
     )
 }
 

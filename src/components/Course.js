@@ -1,14 +1,14 @@
 import React from 'react'
 import { Card, Col } from 'react-bootstrap'
 import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 const Course = (props) => {
     return (
-        <motion.div
-            animate={{ opacity: 1 }}
+        <motion.div variants={pageAnimation} initial='hidden' animate='show'>
+            {/* animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}>
+            transition={{ duration: 1 }} */}
             <Col>
                 <Card className='border-0 shadow-sm'>
                     <Card.Img variant="top" src={props.course.thumbnail} />
