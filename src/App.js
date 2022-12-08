@@ -1,16 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import './styles/custom.scss'
 import Courses from './pages/Courses';
 import NavigationBar from './components/NavigationBar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import './styles/custom.scss'
 
 function App() {
   return (
-    <div>
+    <div style={{ overflowX: 'hidden' }}>
       <Router>
         <NavigationBar />
         <Routes>
