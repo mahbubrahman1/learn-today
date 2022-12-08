@@ -1,8 +1,8 @@
-import React from 'react'
-import { Card, Col, Container, Row } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEarthAmericas, faCertificate, faFire } from '@fortawesome/free-solid-svg-icons'
-import '../styles/custom.scss'
+import React from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEarthAmericas, faCertificate, faFire } from '@fortawesome/free-solid-svg-icons';
+import '../App.scss';
 
 const About = () => {
     return (

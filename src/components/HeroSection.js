@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../styles/custom.scss';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../App.scss';
 
 const HeroSection = () => {
     return (

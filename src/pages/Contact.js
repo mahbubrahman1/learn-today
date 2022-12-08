@@ -1,7 +1,7 @@
-import React from 'react'
-import { Button, Form, Container, Row, Col } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
     return (

@@ -6,7 +6,7 @@ import NavigationBar from './components/NavigationBar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-import './styles/custom.scss'
+import './App.scss';
 
 function App() {
   return (
