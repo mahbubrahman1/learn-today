@@ -31,11 +31,11 @@ const Home = () => {
             </motion.div>
 
             {/* about us */}
-            <h2 className='text-center mt-5 fw-bold'>Why Choose Us</h2>
+            <h2 className='text-center mt-5 fw-bold mb-4'>Why Choose Us</h2>
             <About />
 
             {/* contact  */}
-            <h2 className='text-center mt-4 fw-bold'>Contact Us</h2>
+            <h2 className='text-center mt-5 fw-bold'>Contact Us</h2>
             <Contact />
         </div>
     )
