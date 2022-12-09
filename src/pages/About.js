@@ -1,12 +1,30 @@
 import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Container, Row } from 'react-bootstrap';
 import { faEarthAmericas, faCertificate, faFire } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
+import AboutCom from '../components/About'
 import '../App.scss';
 
 const About = () => {
+    const contents = [
+        {
+            icon: faEarthAmericas,
+            title: 'Onlline Courses',
+            body: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts',
+        },
+        {
+            icon: faCertificate,
+            title: 'Earn A Certificates',
+            body: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts',
+        },
+        {
+            icon: faFire,
+            title: 'Learn with Expert',
+            body: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts',
+        },
+    ]
+
     return (
         <motion.div
             variants={pageAnimation}
@@ -16,37 +34,16 @@ const About = () => {
         >
             <Container className='p-5'>
                 <Row xs={1} md={3} className="g-4">
-                    <Col className='d-flex flex-column justify-items-center'>
-                        <FontAwesomeIcon icon={faEarthAmericas} size='3x' className='custom-color mt-2' />
-                        <Card.Body className='text-center text-white mt-2'>
-                            <Card.Title className='fw-bold'>Online Courses</Card.Title>
-                            <Card.Text className='mt-2'>
-                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-                            </Card.Text>
-                        </Card.Body>
-                    </Col>
-                    <Col className='d-flex flex-column justify-items-center'>
-                        <FontAwesomeIcon icon={faCertificate} size='3x' className='custom-color mt-2' />
-                        <Card.Body className='text-center text-white mt-2'>
-                            <Card.Title className='fw-bold'>Earn A Certificates</Card.Title>
-                            <Card.Text className='mt-2'>
-                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-                            </Card.Text>
-                        </Card.Body>
-                    </Col>
-                    <Col className='d-flex flex-column justify-items-center'>
-                        <FontAwesomeIcon icon={faFire} size='3x' className='custom-color mt-2' />
-                        <Card.Body className='text-center text-white mt-2'>
-                            <Card.Title className='fw-bold'>Learn with Expert</Card.Title>
-                            <Card.Text className='mt-2'>
-                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-                            </Card.Text>
-                        </Card.Body>
-                    </Col>
+                    {
+                        contents.map(content => (<AboutCom
+                            key={content.title}
+                            content={content}
+                        />))
+                    }
                 </Row>
             </Container>
         </motion.div>
     )
 }
 
-export default About
+export default About;
